@@ -1,0 +1,254 @@
+:root {
+	--b-bottom-array-offset: 36;
+	--b_left_bot_timing: 2s;
+	--b_top_duration: 3.5s;
+	--logo-animation-duration: 2s;
+	--master-delay: 1.5;
+	--master-duration: 1.5;
+	--n-left-dasharray: 17.1862‬;
+	--trace-left-lower-dasharray: 20;
+	--trace-right-dasharray: 15;
+}
+svg {
+	display: block;
+	margin: auto;
+	height: 90vh;
+}
+body {
+	background-color: white;
+}
+.b-bottom {
+	stroke-dasharray: var(--b-bottom-array-offset) !important;
+	stroke-dashoffset: var(--b-bottom-array-offset);
+	animation: b_bottom var(--b_left_bot_timing) 1 forwards;
+	animation-delay: calc(0.5s);
+
+}
+.b-left {
+	stroke-dasharray: 34;
+	animation: b_left var(--b_left_bot_timing) 1 forwards;
+}
+.b-top {
+	stroke-dasharray: 34 !important;
+	stroke-dashoffset: 34;
+	animation: b_top var(--b_top_duration) 1 forwards;
+}
+.n-left {
+	animation: n_left_draw 2s 1 forwards;
+	stroke-dasharray: 17.18 !important;
+	stroke-dashoffset: -17.18 !important;
+}
+.n-mid {
+	animation: n_mid_draw 2s 1 forwards;
+	stroke-dasharray: 23;
+	stroke-dashoffset: -23;
+}
+.n-right {
+	animation: n_right_draw 2s 1 forwards;
+	stroke-dasharray: 23;
+	stroke-dashoffset: -23;
+}
+.node-bottom-right {
+	animation: node_expand 0.6s 1;
+	animation-delay: 1.3s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.node-bottom-left {
+	animation: node_expand 0.6s 1;
+	animation-fill-mode: forwards;
+	animation-delay: 1.3s;
+}
+.ruby-bottom-1 {
+	animation: fade-in calc(0.6s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+.ruby-bottom-2 {
+	animation: fade-in calc(0.9s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.05s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-bottom-3 {
+	animation: fade-in calc(0.9s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.35s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-bottom-4 {
+	animation: fade-in calc(0.7s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.6s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-bottom-5 {
+	animation: fade-in calc(0.6s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.8s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-star {
+	animation: fade-in calc(0.3s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(1.1s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-top-1 {
+	animation: fade-in calc(0.8s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.2s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-top-2 {
+	animation: fade-in calc(0.9s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.25s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-top-3 {
+	animation: fade-in calc(0.9s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.5s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-top-4 {
+	animation: fade-in calc(1s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.95s * var(--master-delay));
+	opacity: 0;
+}
+.ruby-top-5 {
+	animation: fade-in calc(0.8s * var(--master-duration)) 1;
+	animation-fill-mode: forwards;
+	animation-delay: calc(0.9s * var(--master-delay));
+	opacity: 0;
+}
+.trace-left-upper {
+	animation: trace_top 0.6s 1 forwards;
+	animation-delay: 0.3s;
+	opacity: 0;
+	stroke-dasharray: 34;
+}
+.trace-left-lower {
+	animation: trace_left_lower 0.6s 1 forwards;
+	animation-delay: 0.9s;
+	opacity: 0 !important;
+	stroke-dasharray: var(--trace-left-lower-dasharray);
+	animation-timing-function: linear;
+}
+.trace-right {
+	animation: trace_right 0.8s 1 forwards;
+	stroke-dasharray: var(--trace-right-dasharray);
+	animation-timing-function: linear;
+}
+@keyframes b_bottom {
+	from {
+		stroke-dasharray: var(--b-bottom-array-offset);
+		stroke-dashoffset: var(--b-bottom-array-offset);
+	}
+	to {
+		stroke-dasharray: var(--b-bottom-array-offset);
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes b_left {
+	from {
+		stroke-dasharray: 34;
+		stroke-dashoffset: 34;
+	}
+	to {
+		stroke-dasharray: 34;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes n_left_draw {
+	from {
+		stroke-dasharray: 17.18;
+		stroke-dashoffset: -17.18;
+	}
+	to {
+		stroke-dasharray: 17.18;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes n_mid_draw {
+	from {
+		stroke-dasharray: 23;
+		stroke-dashoffset: -23;
+	}
+	to {
+		stroke-dasharray: 23;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes n_right_draw {
+	from {
+		stroke-dasharray: 13;
+		stroke-dashoffset: -13;
+	}
+	to {
+		stroke-dasharray: 13;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes b_top {
+	from {
+		stroke-dasharray: 5;
+		stroke-dashoffset: 5;
+	}
+	to {
+		stroke-dasharray: 34;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes node_expand {
+	from {
+		r: 0;
+	}
+	to {
+		r: 1.25748;
+	}
+}
+@keyframes trace_top {
+	from {
+		opacity: 1;
+		stroke-dasharray: 7.7;
+		stroke-dashoffset: -7.7;
+	}
+	to {
+		opacity: 1;
+		stroke-dasharray: 7.7;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes trace_left_lower {
+	from {
+		opacity: 1;
+		stroke-dasharray: var(--trace-left-lower-dasharray);
+		stroke-dashoffset: var(--trace-left-lower-dasharray);
+	}
+	to {
+
+		opacity: 1;
+		stroke-dasharray: var(--trace-left-lower-dasharray);
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes trace_right {
+	from {
+		stroke-dasharray: var(--trace-right-dasharray);
+		stroke-dashoffset: var(--trace-right-dasharray);
+	}
+	to {
+		stroke-dasharray: var(--trace-right-dasharray);
+		stroke-dashoffset: 0;
+	}
