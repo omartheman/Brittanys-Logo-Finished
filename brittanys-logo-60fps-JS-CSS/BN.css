@@ -19,7 +19,6 @@ body {
 	stroke-dashoffset: var(--b-bottom-array-offset);
 	animation: b_bottom var(--b_left_bot_timing) 1 forwards;
 	animation-delay: calc(0.5s);
-
 }
 .b-left {
 	stroke-dasharray: 34;
@@ -143,10 +142,6 @@ body {
 	}
 }
 @keyframes b_top {
-	from {
-		stroke-dasharray: 5;
-		stroke-dashoffset: 5;
-	}
 	to {
 		stroke-dasharray: 34;
 		stroke-dashoffset: 0;
